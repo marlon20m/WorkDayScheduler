@@ -37,6 +37,7 @@
   <title>DailyPlanner</title>
 
 
+
 </head>
 
 <body onload="refresh()">
@@ -72,6 +73,7 @@
       </p>
     </div><br />
   </div>
+
 
   <table class="table">
     <thead id="dailyPlanner">
@@ -119,6 +121,7 @@
       var storedItem = localStorage.getItem("storedItem");
 
 
+
       function refresh() {
         var storeRefresh = localStorage.getItem("storedItem");
         if (storeRefresh) {
@@ -127,6 +130,7 @@
         localStorage.setItem("storedItem", Item);
         document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
       }
+
 
 
       function init() {
@@ -256,3 +260,5 @@
 </body>
 
 </html>
+
+
