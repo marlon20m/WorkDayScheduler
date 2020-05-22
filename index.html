@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -112,6 +111,70 @@
     </thead>
   </table>
 
+
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+
+
+      var storedItem = localStorage.getItem("storedItem");
+
+
+      function refresh() {
+        var storeRefresh = localStorage.getItem("storedItem");
+        if (storeRefresh) {
+          document.getElementById('eventStored').value = storeRefresh;
+        }
+        localStorage.setItem("storedItem", Item);
+        document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
+
+      function init() {
+        //     <tr>
+        //   <th bgcolor="#90EE90">9 AM</th>
+        //   <th bgcolor="#90EE90"> Event  - <p id="eventText"></p>  <input type="text" id="eventStored"/>
+        //   <button style="float: right;" class='saveBtn'  onclick="save();">Save</button>
+        // </tr>
+        var hours = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"]
+        for (var i = 0; i < hours.length; i++) {
+          var tr = $("<tr>")
+          var th = $("<th>")
+          th.attr("bgcolor", "#90eebf")
+          th.append(hours[i])
+
+          var p = $("<p>")
+          p.attr("id", "eventText" + i)
+
+          var input = $("<input>")
+          input.attr("type", "text")
+          input.attr("id", "eventStored" + i)
+          input.attr("class", "auto-save")
+          var button = $("<button>")
+          // button.attr("style", "float: right;")
+          button.attr("class", "saveBtn")
+          button.text("Save")
+          button.on("click", save)
+          th.append("    Schedule Event : ", p, input, button)
+          tr.append(th)
+          $("#dailyPlanner").append(tr)
+        }
+
+      }
+      init();
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $("#shMenu").menu({
+            position: {
+              my: "center top",
+              at: "center bottom",
+            },
+          });
+        });
+
   <script type="text/javascript">
     $(document).ready(function () {
       $("#shMenu").menu({
@@ -121,29 +184,10 @@
         },
       });
     });
+
   </script>
   </div>
 
 </body>
 
 </html>
-
-
-
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#shMenu").menu({
-          position: {
-            my: "center top",
-            at: "center bottom",
-          },
-        });
-      });
-    </script>
-
-  </div>
-
-</body>
-
-
-
