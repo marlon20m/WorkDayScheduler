@@ -37,6 +37,7 @@
   <title>DailyPlanner</title>
 
 
+
 </head>
 
 <body onload="refresh()">
@@ -72,6 +73,7 @@
       </p>
     </div><br />
   </div>
+
 
   <table class="table">
     <thead id="dailyPlanner">
@@ -163,6 +165,7 @@
       init();
 
 
+
       $(".saveBtn").on("click", save)
       function save() {
         var Item = $("#eventStored0").val()
@@ -212,6 +215,7 @@
         $("#eventText4").val(localStorage.getItem("storedItem4"))
         //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
       }
+
       $(".saveBtn").on("click", save5)
       function save5() {
         var Item = $("#eventStored5").val()
@@ -245,5 +249,4 @@
   </div>
 
 </body>
-
 </html>
