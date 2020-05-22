@@ -75,6 +75,7 @@
   </div>
 
 
+
   <table class="table">
     <thead id="dailyPlanner">
 
@@ -164,7 +165,7 @@
 
       }
       init();
-<
+
 
 
       $(".saveBtn").on("click", save)
@@ -178,6 +179,18 @@
         //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
 
       }
+
+
+      $(".saveBtn").on("click", save1)
+      function save1() {
+        var Item = $("#eventStored1").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem1", Item);
+        $("#eventStored1").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText1").val(localStorage.getItem("storedItem1"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
 
 
       <script type="text/javascript">
@@ -194,4 +207,5 @@
   </div>
 
 </body>
+
 </html>
