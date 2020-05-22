@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -123,6 +122,7 @@
       var storedItem = localStorage.getItem("storedItem");
 
 
+
       function refresh() {
         var storeRefresh = localStorage.getItem("storedItem");
         if (storeRefresh) {
@@ -147,3 +147,147 @@
   </div>
 
 </body>
+
+
+
+      function refresh() {
+        var storeRefresh = localStorage.getItem("storedItem");
+        if (storeRefresh) {
+          document.getElementById('eventStored').value = storeRefresh;
+        }
+        localStorage.setItem("storedItem", Item);
+        document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
+
+      function init() {
+        //     <tr>
+        //   <th bgcolor="#90EE90">9 AM</th>
+        //   <th bgcolor="#90EE90"> Event  - <p id="eventText"></p>  <input type="text" id="eventStored"/>
+        //   <button style="float: right;" class='saveBtn'  onclick="save();">Save</button>
+        // </tr>
+        var hours = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"]
+        for (var i = 0; i < hours.length; i++) {
+          var tr = $("<tr>")
+          var th = $("<th>")
+          th.attr("bgcolor", "#90eebf")
+          th.append(hours[i])
+
+          var p = $("<p>")
+          p.attr("id", "eventText" + i)
+
+          var input = $("<input>")
+          input.attr("type", "text")
+          input.attr("id", "eventStored" + i)
+          input.attr("class", "auto-save")
+          var button = $("<button>")
+          // button.attr("style", "float: right;")
+          button.attr("class", "saveBtn")
+          button.text("Save")
+          button.on("click", save)
+          th.append("    Schedule Event : ", p, input, button)
+          tr.append(th)
+          $("#dailyPlanner").append(tr)
+        }
+
+      }
+      init();
+
+
+
+      $(".saveBtn").on("click", save)
+      function save() {
+        var Item = $("#eventStored0").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem0", Item);
+        $("#eventStored0").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText0").val(localStorage.getItem("storedItem0"))
+
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+
+      }
+
+      $(".saveBtn").on("click", save1)
+      function save1() {
+        var Item = $("#eventStored1").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem1", Item);
+        $("#eventStored1").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText1").val(localStorage.getItem("storedItem1"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
+      $(".saveBtn").on("click", save2)
+      function save2() {
+        var Item = $("#eventStored2").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem2", Item);
+        $("#eventStored2").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText2").val(localStorage.getItem("storedItem2"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+      $(".saveBtn").on("click", save3)
+      function save3() {
+        var Item = $("#eventStored3").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem3", Item);
+        $("#eventStored3").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText3").val(localStorage.getItem("storedItem3"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+      $(".saveBtn").on("click", save4)
+      function save4() {
+        var Item = $("#eventStored4").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem4", Item);
+        $("#eventStored4").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText4").val(localStorage.getItem("storedItem4"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
+      $(".saveBtn").on("click", save5)
+      function save5() {
+        var Item = $("#eventStored5").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem5", Item);
+        $("#eventStored5").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText5").val(localStorage.getItem("storedItem5"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+      $(".saveBtn").on("click", save6)
+      function save6() {
+        var Item = $("#eventStored6").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem6", Item);
+        $("#eventStored6").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText6").val(localStorage.getItem("storedItem6"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+      $(".saveBtn").on("click", save7)
+      function save7() {
+        var Item = $("#eventStored7").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem7", Item);
+        $("#eventStored7").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText7").val(localStorage.getItem("storedItem7"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
+
+
+
+
+
+      $("#shMenu").menu({
+        position: {
+          my: "center top",
+          at: "center top",
+        },
+      });
+  </script>
+  </div>
+
+</body>
+
+</html>
+
