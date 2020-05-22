@@ -164,6 +164,21 @@
 
       }
       init();
+<
+
+
+      $(".saveBtn").on("click", save)
+      function save() {
+        var Item = $("#eventStored0").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem0", Item);
+        $("#eventStored0").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText0").val(localStorage.getItem("storedItem0"))
+
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+
+      }
+
 
       <script type="text/javascript">
         $(document).ready(function () {
@@ -175,19 +190,8 @@
           });
         });
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#shMenu").menu({
-        position: {
-          my: "center top",
-          at: "center bottom",
-        },
-      });
-    });
-
   </script>
   </div>
 
 </body>
-
 </html>
