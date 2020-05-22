@@ -37,56 +37,45 @@
   <link rel="stylesheet" href="style.css" />
   <title>DailyPlanner</title>
 
+
+
 </head>
 
-<body>
-  <header class="jumbotron">
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-  </header>
-  <div class="container">
-    <!-- Timeblocks go here -->
-  </div>
-
+<body onload="refresh()">
   <div id="wrapper">
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+    </div>
+
     <ul id="shMenu">
       <li>
 
-        <a href="JavaScript:void(0)">How-to-Instructions</a>
-        <ul>
-          <li><a href="JavaScript:void(0)">Add Date</a></li>
-          <li><a href="JavaScript:void(0)">Add Time</a></li>
-          <li><a href="JavaScript:void(0)">Add Event</a></li>
-          <li><a href="JavaScript:void(0)">Save Event</a></li>
-        </ul>
-      </li>
-      <li>
         <a href="JavaScript:void(0)">Details</a>
         <ul>
           <li><a href="JavaScript:void(0)">Color Coding</a></li>
-
-          <a href="JavaScript:void(0)">X Men</a>
-          <ul>
-            <li><a href="JavaScript:void(0)">Angel</a></li>
-            <li><a href="JavaScript:void(0)">Cyclops</a></li>
-            <li><a href="JavaScript:void(0)">Beast</a></li>
-            <li><a href="JavaScript:void(0)">Marvel Girl</a></li>
-            <li><a href="JavaScript:void(0)">Iceman</a></li>
-          </ul>
+          <li><a href="JavaScript:void(0)">Instructions</a></li>
+          <ul></ul>
       </li>
-      <li>
-        <a href="JavaScript:void(0)">Defenders</a>
-        <ul>
-          <li><a href="JavaScript:void(0)">Hulk</a></li>
-          <li><a href="JavaScript:void(0)">Doctor Strange</a></li>
-          <li><a href="JavaScript:void(0)">Namor</a></li>
-          <li><a href="JavaScript:void(0)">Silver Surfer</a></li>
+    </ul><br />
 
-        </ul>
-      </li>
-    </ul>
-    <br />
+    <div id="accordion">
+      <h4>Color Based on Time</h4>
+      <p>
+        To begin click on the text for each scheduled event ! Write a custom event and press save ! Refresh the page and
+        your Work Day Scheduler will remain in tact. The <r>Red</r> coloring will identify the current time period for
+        you to create an event based on the current
+        time. Future times will be hightlighted in Blue. All other times should be highlighted in <g>Green</g>.
+        (Click "Color Based on Time" to hide text).
+      </p>
+    </div><br />
+  </div>
+
+
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -98,8 +87,9 @@
         });
       });
     </script>
+
   </div>
 
 </body>
 
-</html>
+
