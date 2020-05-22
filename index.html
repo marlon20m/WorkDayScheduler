@@ -75,7 +75,6 @@
   </div>
 
 
-
   <table class="table">
     <thead id="dailyPlanner">
 
@@ -133,32 +132,6 @@
       }
 
 
-      <script type="text/javascript">
-        $(document).ready(function () {
-          $("#shMenu").menu({
-            position: {
-              my: "center top",
-              at: "center bottom",
-            },
-          });
-        });
-
-  </script>
-  </div>
-
-</body>
-
-
-
-      function refresh() {
-        var storeRefresh = localStorage.getItem("storedItem");
-        if (storeRefresh) {
-          document.getElementById('eventStored').value = storeRefresh;
-        }
-        localStorage.setItem("storedItem", Item);
-        document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-      }
-
 
       function init() {
         //     <tr>
@@ -192,7 +165,6 @@
 
       }
       init();
-
 
 
       $(".saveBtn").on("click", save)
@@ -244,7 +216,6 @@
         $("#eventText4").val(localStorage.getItem("storedItem4"))
         //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
       }
-
       $(".saveBtn").on("click", save5)
       function save5() {
         var Item = $("#eventStored5").val()
@@ -274,8 +245,7 @@
       }
 
 
-
-
+      $('.auto-save').savy('load');  //this is the Auto-save! all text will persist with this after reload. 
 
 
       $("#shMenu").menu({
@@ -290,4 +260,5 @@
 </body>
 
 </html>
+
 
