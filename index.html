@@ -75,7 +75,6 @@
   </div>
 
 
-
   <table class="table">
     <thead id="dailyPlanner">
 
@@ -111,7 +110,6 @@
         <th><div class="editable5" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr> -->
     </thead>
   </table>
-
 
 
   <script type="text/javascript">
@@ -191,6 +189,33 @@
         //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
       }
 
+      $(".saveBtn").on("click", save2)
+      function save2() {
+        var Item = $("#eventStored2").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem2", Item);
+        $("#eventStored2").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText2").val(localStorage.getItem("storedItem2"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+      $(".saveBtn").on("click", save3)
+      function save3() {
+        var Item = $("#eventStored3").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem3", Item);
+        $("#eventStored3").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText3").val(localStorage.getItem("storedItem3"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+      $(".saveBtn").on("click", save4)
+      function save4() {
+        var Item = $("#eventStored4").val()
+        //document.getElementById("eventStored").value;
+        localStorage.setItem("storedItem4", Item);
+        $("#eventStored4").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+        $("#eventText4").val(localStorage.getItem("storedItem4"))
+        //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
 
 
       <script type="text/javascript">
