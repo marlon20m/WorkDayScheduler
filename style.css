@@ -1,17 +1,19 @@
 body {
-
   font-family: "Open Sans", sans-serif;
 
   font-size: 16px;
   line-height: 1;
 }
 
-textarea {
+input {
   background: transparent;
   border: none;
-  resize: none;
+  resize: horizontal;
+  width: 1100px;
+  text-align: center !important;
   color: #000000;
-  border-left: 1px solid black;
+  border-left: 6px solid white;
+  border-right: 6px solid white;
   padding: 10px;
 }
 
@@ -45,7 +47,7 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #90eebf;
   color: white;
 }
 
@@ -55,16 +57,17 @@ textarea {
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #7193dd;
   color: white;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-left: 24px solid lightcyan;
+  border-top-right-radius: 65px;
+  border-bottom-right-radius: 65px;
   background-color: #06aed5;
   color: white;
+  float: right;
 }
 
 .saveBtn i:hover {
