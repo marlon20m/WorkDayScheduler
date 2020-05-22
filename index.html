@@ -37,6 +37,7 @@
   <title>DailyPlanner</title>
 
 
+
 </head>
 
 <body onload="refresh()">
@@ -73,6 +74,7 @@
     </div><br />
   </div>
 
+
   <table class="table">
     <thead id="dailyPlanner">
 
@@ -80,8 +82,37 @@
         <th bgcolor="#90EE90">9 AM</th>
         <th bgcolor="#90EE90"> Event  - <p id="eventText"></p> <p id="eventDisplay"></p> <input type="text" id="eventStored"/>
         <button style="float: right;" onclick="save();">Save</button>
+
       </tr>-->
 
+
+
+      </tr>
+
+      <tr>
+        <th>10 AM</th>
+        <th><div class="editable10" edit_kind="click">helllo</div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>11 AM</th>
+        <th><div class="editable11" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>12 AM</th>
+        <th><div class="editable12" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>1 PM</th>
+        <th><div class="editable1" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>2 PM</th>
+        <th><div class="editable2" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>3 PM</th>
+        <th><div class="editable3" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>4 PM</th>
+        <th><div class="editable4" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr>
+      <tr>
+        <th>5 PM</th>
+        <th><div class="editable5" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr> -->
 
     </thead>
   </table>
@@ -94,6 +125,7 @@
 
 
       var storedItem = localStorage.getItem("storedItem");
+
 
 
       function refresh() {
@@ -219,6 +251,7 @@
 
 
 
+
       $('.auto-save').savy('load');  //this is the Auto-save! all text will persist with this after reload. 
 
 
@@ -239,6 +272,7 @@
           at: "center top",
         },
       });
+
 
       $("#accordion").accordion({
         // Slide animation or not or length
@@ -308,3 +342,4 @@
 </body>
 
 </html>
+
