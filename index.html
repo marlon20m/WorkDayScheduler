@@ -82,6 +82,11 @@
         <th bgcolor="#90EE90">9 AM</th>
         <th bgcolor="#90EE90"> Event  - <p id="eventText"></p> <p id="eventDisplay"></p> <input type="text" id="eventStored"/>
         <button style="float: right;" onclick="save();">Save</button>
+
+      </tr>-->
+
+
+
       </tr>
 
       <tr>
@@ -108,6 +113,7 @@
       <tr>
         <th>5 PM</th>
         <th><div class="editable5" edit_kind="click"></div><span style="float:right"><button id="but_add">Save</button></span></th>      </tr> -->
+
     </thead>
   </table>
 
@@ -130,7 +136,6 @@
         localStorage.setItem("storedItem", Item);
         document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
       }
-
 
 
       function init() {
@@ -245,7 +250,20 @@
       }
 
 
+
+
       $('.auto-save').savy('load');  //this is the Auto-save! all text will persist with this after reload. 
+
+
+
+      // function save() {
+      //   var Item = $("#eventStored0").val()  //document.getElementById("eventStored").value;
+      //   localStorage.setItem("storedItem0", Item);
+      //   $("#eventStored0").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
+      //   $("#eventText0").val(localStorage.getItem("storedItem0"))    //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      // }
+
+
 
 
       $("#shMenu").menu({
@@ -254,11 +272,74 @@
           at: "center top",
         },
       });
+
+
+      $("#accordion").accordion({
+        // Slide animation or not or length
+        animate: 4000,
+        // Starting tab
+        active: 0,
+        // Collapsible if same tab is clicked
+        collapsible: true,
+        // Event that triggers
+        event: "click",
+        // Height based on content (content) or largest (auto)
+        heightStyle: "content"
+      });
+
+      $("r").css("color", "red");
+
+      $("g").css("color", "green");
+
+
+
+
+
+      currentTime = moment().hour();
+
+      $("#eventStored0 .auto-save").val(localStorage.getItem("9"));
+      $("#eventStored1 .auto-save").val(localStorage.getItem("10"));
+      $("#eventStored2 .auto-save").val(localStorage.getItem("11"));
+      $("#eventStored3 .auto-save").val(localStorage.getItem("12"));
+      $("#eventStored4 .auto-save").val(localStorage.getItem("13"));
+      $("#eventStored5 .auto-save").val(localStorage.getItem("14"));
+      $("#eventStored6 .auto-save").val(localStorage.getItem("15"));
+      $("#eventStored7 .auto-save").val(localStorage.getItem("16"));
+      $("#eventStored8 .auto-save").val(localStorage.getItem("17"));
+
+      let rowTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+      for (let i = 0; i < rowTime.length; i++) {
+        console.log(rowTime[i]);
+
+        if (currentTime < rowTime[i]) {
+          console.log(currentTime);
+          $("<tr>")
+            .removeClass("present")
+            .removeClass("past")
+            .addClass("future")
+        }
+        if (currentTime < rowTtime[i]) {
+          console.log(currentTime);
+          $("<tr>")
+            .removeClass("present")
+            .removeClass("past")
+            .addClass("future")
+        }
+        if (currentTime < rowTime[i]) {
+          console.log(currentTime);
+          $("<tr>")
+            .removeClass("present")
+            .removeClass("past")
+            .addClass("future")
+        }
+
+      }
+
+    });
+
   </script>
   </div>
-
 </body>
 
 </html>
-
 
