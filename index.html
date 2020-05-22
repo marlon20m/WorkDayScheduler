@@ -75,6 +75,7 @@
   </div>
 
 
+
   <table class="table">
     <thead id="dailyPlanner">
 
@@ -119,6 +120,34 @@
 
 
       var storedItem = localStorage.getItem("storedItem");
+
+
+
+      function refresh() {
+        var storeRefresh = localStorage.getItem("storedItem");
+        if (storeRefresh) {
+          document.getElementById('eventStored').value = storeRefresh;
+        }
+        localStorage.setItem("storedItem", Item);
+        document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
+      }
+
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $("#shMenu").menu({
+            position: {
+              my: "center top",
+              at: "center bottom",
+            },
+          });
+        });
+
+  </script>
+  </div>
+
+</body>
+
 
 
       function refresh() {
@@ -261,3 +290,4 @@
 </body>
 
 </html>
+
