@@ -67,7 +67,6 @@ input {
   border-bottom-right-radius: 65px;
   background-color: #06aed5;
   color: white;
-  float: right;
 }
 
 .saveBtn i:hover {
