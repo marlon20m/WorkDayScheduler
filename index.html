@@ -15,7 +15,8 @@
 
   <title>Work Day Scheduler</title>
 
-
+  <script src="lib/moment/moment.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 
 
 
@@ -112,6 +113,11 @@
   <script src="js/jquery-ui.min.js"></script> -->
 
 
+<<<<<<< HEAD
+=======
+    <script src="lib_/moment/moment.js"></script>
+
+>>>>>>> fa6db5c9f03a0839ae56501745a6de3c12414370
     <!-- 
   <script src="//code.jquery.com/jquery.min.js"></script>
   <script src="savy.min.js"></script> -->
@@ -213,73 +219,6 @@
 
         }
 
-        // $(".saveBtn").on("click", save1)
-        // function save1() {
-        //   var Item = $("#eventStored1").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem1", Item);
-        //   $("#eventStored1").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText1").val(localStorage.getItem("storedItem1"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-
-        // $(".saveBtn").on("click", save2)
-        // function save2() {
-        //   var Item = $("#eventStored2").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem2", Item);
-        //   $("#eventStored2").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText2").val(localStorage.getItem("storedItem2"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-        // $(".saveBtn").on("click", save3)
-        // function save3() {
-        //   var Item = $("#eventStored3").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem3", Item);
-        //   $("#eventStored3").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText3").val(localStorage.getItem("storedItem3"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-        // $(".saveBtn").on("click", save4)
-        // function save4() {
-        //   var Item = $("#eventStored4").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem4", Item);
-        //   $("#eventStored4").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText4").val(localStorage.getItem("storedItem4"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-        // $(".saveBtn").on("click", save5)
-        // function save5() {
-        //   var Item = $("#eventStored5").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem5", Item);
-        //   $("#eventStored5").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText5").val(localStorage.getItem("storedItem5"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-        // $(".saveBtn").on("click", save6)
-        // function save6() {
-        //   var Item = $("#eventStored6").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem6", Item);
-        //   $("#eventStored6").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText6").val(localStorage.getItem("storedItem6"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-        // $(".saveBtn").on("click", save7)
-        // function save7() {
-        //   var Item = $("#eventStored7").val()
-        //   //document.getElementById("eventStored").value;
-        //   localStorage.setItem("storedItem7", Item);
-        //   $("#eventStored7").val(Item)      //document.getElementById("eventStored").innerHTML = Item;
-        //   $("#eventText7").val(localStorage.getItem("storedItem7"))
-        //   //document.getElementById("eventText").innerHTML = localStorage.getItem("storedItem");
-        // }
-
-
-
 
 
 
@@ -320,43 +259,40 @@
 
 
 
+//         $("#eventStored0 .auto-save").val(localStorage.getItem("9"));
+//         $("#eventStored1 .auto-save").val(localStorage.getItem("10"));
+//         $("#eventStored2 .auto-save").val(localStorage.getItem("11"));
+//         $("#eventStored3 .auto-save").val(localStorage.getItem("12"));
+//         $("#eventStored4 .auto-save").val(localStorage.getItem("13"));
+//         $("#eventStored5 .auto-save").val(localStorage.getItem("14"));
+//         $("#eventStored6 .auto-save").val(localStorage.getItem("15"));
+//         $("#eventStored7 .auto-save").val(localStorage.getItem("16"));
+//         $("#eventStored8 .auto-save").val(localStorage.getItem("17"));
 
+//         let rowTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+//         for (let i = 0; i < rowTime.length; i++) {
+//           console.log(rowTime[i]);
 
-
-        $("#eventStored0 .auto-save").val(localStorage.getItem("9"));
-        $("#eventStored1 .auto-save").val(localStorage.getItem("10"));
-        $("#eventStored2 .auto-save").val(localStorage.getItem("11"));
-        $("#eventStored3 .auto-save").val(localStorage.getItem("12"));
-        $("#eventStored4 .auto-save").val(localStorage.getItem("13"));
-        $("#eventStored5 .auto-save").val(localStorage.getItem("14"));
-        $("#eventStored6 .auto-save").val(localStorage.getItem("15"));
-        $("#eventStored7 .auto-save").val(localStorage.getItem("16"));
-        $("#eventStored8 .auto-save").val(localStorage.getItem("17"));
-
-        let rowTime = [9, 10, 11, 12, 13, 14, 15, 16, 17];
-        for (let i = 0; i < rowTime.length; i++) {
-          console.log(rowTime[i]);
-
-          if (currentTime < rowTime[i]) {
-            console.log(currentTime);
-            $("<tr>")
-              .removeClass("present")
-              .removeClass("past")
-              .addClass("future")
-          }
-          if (currentTime < rowTtime[i]) {
-            console.log(currentTime);
-            $("<tr>")
-              .removeClass("present")
-              .removeClass("past")
-              .addClass("future")
-          }
-          if (currentTime < rowTime[i]) {
-            console.log(currentTime);
-            $("<tr>")
-              .removeClass("present")
-              .removeClass("past")
-              .addClass("future")
+//           if (currentTime < rowTime[i]) {
+//             console.log(currentTime);
+//             $("<tr>")
+//               .removeClass("present")
+//               .removeClass("past")
+//               .addClass("future")
+//           }
+//           if (currentTime < rowTtime[i]) {
+//             console.log(currentTime);
+//             $("<tr>")
+//               .removeClass("present")
+//               .removeClass("past")
+//               .addClass("future")
+//           }
+//           if (currentTime < rowTime[i]) {
+//             console.log(currentTime);
+//             $("<tr>")
+//               .removeClass("present")
+//               .removeClass("past")
+//               .addClass("future")
           }
 
         }
